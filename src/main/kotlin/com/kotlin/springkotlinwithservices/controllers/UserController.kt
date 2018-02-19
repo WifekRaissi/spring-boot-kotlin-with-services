@@ -11,13 +11,12 @@ class UserController(){
     @Autowired
     lateinit var userService: UserService
 
-
     @GetMapping("/hello")
     fun helloUser(@RequestParam(value = "name") name: String)=
-        userService.HelloUser("$name")
+        userService.helloUser("$name")
 
-@PostMapping("/add")
-fun addUser(@RequestBody user:User)=
+    @PostMapping("/add")
+    fun addUser(@RequestBody user:User)=
         userService.addUser(user)
 
     @PutMapping("/update")

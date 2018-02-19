@@ -10,22 +10,19 @@ import java.util.concurrent.atomic.AtomicLong
 class UserServiceImpl: UserService {
     val counter = AtomicLong()
 
-
-    override fun HelloUser(name: String): User {
-
-        return User(counter.incrementAndGet(), "hello,$name", "", birthDate = Date())
+    override fun helloUser(name: String): User {
+        return User(counter.incrementAndGet(), "hello,$name", "", birthDay = Date())
     }
 
 
     override fun addUser(user: User): User {
-        return User(counter.incrementAndGet(), user.name, user.surname, user.birthDate)
-
+        return User(counter.incrementAndGet(), user.name, user.surname, user.birthDay)
 
     }
 
     override fun updateUser(surname: String, user: User): User {
 
-        return User(counter.incrementAndGet(), user.name, surname, user.birthDate)
+        return User(counter.incrementAndGet(), user.name, surname, user.birthDay)
 
 
     }
