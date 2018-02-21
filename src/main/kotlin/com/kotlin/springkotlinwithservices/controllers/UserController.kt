@@ -13,7 +13,7 @@ class UserController() {
 
 
     @GetMapping("/users")
-    fun getUser(@RequestParam(value = "name") name: String):User=
+    fun getUser(@RequestParam(value = "name") name: String)=
         userService.getUser(name)
 
 

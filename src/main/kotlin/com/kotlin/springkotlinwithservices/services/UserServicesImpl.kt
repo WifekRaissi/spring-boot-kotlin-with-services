@@ -13,7 +13,7 @@ class UserServiceImpl: UserService {
 
 
     override fun getUser(name: String)=
-      User(1, name, "wifek", Date("2000-02-23"))
+      User(1, name, "wifek", Date("2000/02/23"))
 
     override fun addUser(user: User)=
             log.info("${user.name},added!!!")
